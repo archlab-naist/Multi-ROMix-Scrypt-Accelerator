@@ -1,0 +1,15 @@
+{
+    "C_Cpp.errorSquiggles": "Enabled",
+    "files.associations": {
+        "cstddef": "cpp",
+        "string_view": "cpp",
+        "new": "cpp",
+        "algorithm": "cpp",
+        "iostream": "cpp",
+        "random": "cpp"
+    },
+    "C_Cpp.dimInactiveRegions": true,
+    "C_Cpp.default.compilerPath": "usr/bin/g++",
+
+    "C_Cpp.default.includePath": ["$(workspaceFolder)/src", "$(workspaceFolder)/include"]
+}

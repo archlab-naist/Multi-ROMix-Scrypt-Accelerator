@@ -1,0 +1,45 @@
+Determining if the CUDA compiler works failed with the following output:
+Change Dir: /cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make.exe cmTC_02e64/fast && /usr/bin/make  -f CMakeFiles/cmTC_02e64.dir/build.make CMakeFiles/cmTC_02e64.dir/build
+make[1]: Entering directory '/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_02e64.dir/main.cu.o
+"/cygdrive/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/nvcc.exe" -forward-unknown-to-host-compiler    -x cu -c "/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp/main.cu" -o CMakeFiles/cmTC_02e64.dir/main.cu.o
+c1xx: fatal error C1083: Cannot open source file: 'F:/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp/main.cu': No such file or directory
+main.cu
+make[1]: *** [CMakeFiles/cmTC_02e64.dir/build.make:86: CMakeFiles/cmTC_02e64.dir/main.cu.o] Error 2
+make[1]: Leaving directory '/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_02e64/fast] Error 2
+
+
+
+Determining if the CUDA compiler works failed with the following output:
+Change Dir: /cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make.exe cmTC_3872d/fast && /usr/bin/make  -f CMakeFiles/cmTC_3872d.dir/build.make CMakeFiles/cmTC_3872d.dir/build
+make[1]: Entering directory '/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_3872d.dir/main.cu.o
+"/cygdrive/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/nvcc.exe" -forward-unknown-to-host-compiler    -x cu -c "/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp/main.cu" -o CMakeFiles/cmTC_3872d.dir/main.cu.o
+c1xx: fatal error C1083: Cannot open source file: 'F:/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp/main.cu': No such file or directory
+main.cu
+make[1]: *** [CMakeFiles/cmTC_3872d.dir/build.make:86: CMakeFiles/cmTC_3872d.dir/main.cu.o] Error 2
+make[1]: Leaving directory '/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_3872d/fast] Error 2
+
+
+
+Determining if the CUDA compiler works failed with the following output:
+Change Dir: /cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make.exe cmTC_ac8ce/fast && /usr/bin/make  -f CMakeFiles/cmTC_ac8ce.dir/build.make CMakeFiles/cmTC_ac8ce.dir/build
+make[1]: Entering directory '/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp'
+Building CUDA object CMakeFiles/cmTC_ac8ce.dir/main.cu.o
+"/cygdrive/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/nvcc.exe" -forward-unknown-to-host-compiler    -x cu -c "/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp/main.cu" -o CMakeFiles/cmTC_ac8ce.dir/main.cu.o
+c1xx: fatal error C1083: Cannot open source file: 'F:/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp/main.cu': No such file or directory
+main.cu
+make[1]: *** [CMakeFiles/cmTC_ac8ce.dir/build.make:86: CMakeFiles/cmTC_ac8ce.dir/main.cu.o] Error 2
+make[1]: Leaving directory '/cygdrive/f/Litecoin Soft/myscrypt/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_ac8ce/fast] Error 2
+
+
+

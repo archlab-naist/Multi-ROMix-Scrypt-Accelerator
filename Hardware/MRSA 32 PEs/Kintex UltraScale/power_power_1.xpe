@@ -1,0 +1,916 @@
+<?xml version="1.0"?>
+<POWERDATA author="Vivado Power Analysis" dataVersion="2020.2" design="scrypt_32_romix_ip_v1_0" designState="synthesized" date="Tue Sep  7 17:48:11 2021" pwrOpt="None" activityLevel="vectorless">
+	<ENVIRONMENT>
+		<DEVICE part="xcku060" grade="extended" package="ffva1156" speed="-2" process="typical" vid="No">
+		</DEVICE>
+		<VOLTAGESOURCES>
+			<SOURCE name="Vcco18" voltage="1.800000" icc="0.002264" iccq="0.000043" power="0.004152">
+			</SOURCE>
+			<SOURCE name="Vccbram" voltage="0.950000" icc="0.129476" iccq="0.045927" power="0.166633">
+			</SOURCE>
+			<SOURCE name="Vccint" voltage="0.950000" icc="7.797800" iccq="0.305862" power="7.698478">
+			</SOURCE>
+			<SOURCE name="Vccaux" voltage="1.800000" icc="0.000000" iccq="0.123216" power="0.221788">
+			</SOURCE>
+			<SOURCE name="Vccint_io" voltage="0.950000" icc="0.001741" iccq="0.026178" power="0.026523">
+			</SOURCE>
+			<SOURCE name="Vccaux_io" voltage="1.800000" icc="0.014149" iccq="0.081203" power="0.171633">
+			</SOURCE>
+			<SOURCE name="Vccadc" voltage="1.800000" icc="0.000000" iccq="0.013800" power="0.024840">
+			</SOURCE>
+		</VOLTAGESOURCES>
+		<THERMAL>
+			<AMBIENT value="25.000000">
+			</AMBIENT>
+			<AIRFLOW value="250.000000">
+			</AIRFLOW>
+			<HEATSINK value="medium (Medium Profile)">
+			</HEATSINK>
+			<BOARDSELECTION value="medium (10&quot;x10&quot;)">
+			</BOARDSELECTION>
+			<BOARDLAYERS value="12to15 (12 to 15 Layers)">
+			</BOARDLAYERS>
+			<TSA value="2.400000">
+			</TSA>
+			<TJB value="1.900000">
+			</TJB>
+			<BOARDTEMP value="25.0 (C)">
+			</BOARDTEMP>
+			<JUNCTION value="36.7 (C)">
+			</JUNCTION>
+		</THERMAL>
+	</ENVIRONMENT>
+	<BLOCKDETAILS>
+		<BYTYPE>
+			<BLOCKTYPE name="Clocks">
+				<CLOCK name="s00_axi_aclk" freq="174.550534" belFanout="1" sliceFanout="1" FoPerSite="1.000000" sliceEnableRate="0.000000" leafs="0.000000" hrows="0.000000" power="0.000006">
+				</CLOCK>
+				<CLOCK name="s00_axi_aclk_IBUF_BUFG" freq="174.550534" belFanout="158088" sliceFanout="49103" FoPerSite="3.219518" sliceEnableRate="0.149507" leafs="0.000000" hrows="0.000000" power="0.479857" enableRate="1" bufType="BUFG">
+				</CLOCK>
+				<CLOCK name="s00_axi_aclk_IBUF_inst/O" freq="174.550534" belFanout="1" sliceFanout="1" FoPerSite="1.000000" sliceEnableRate="0.000000" leafs="0.000000" hrows="0.000000" power="0.000000" enableRate="1" bufType="I/O">
+				</CLOCK>
+				<CLOCK name="s00_axi_aclk_IBUF_inst/OUT" freq="174.550534" belFanout="1" sliceFanout="1" FoPerSite="1.000000" sliceEnableRate="0.000000" leafs="0.000000" hrows="0.000000" power="0.000000" enableRate="1" bufType="I/O">
+				</CLOCK>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="LOGIC">
+				<LOGIC clock="Unclocked_or_HFN_instance" clockFreq="174.550534" clockFreq2="174.550534" toggleRate="26.789238" toggleRate2="27.387164" totalRate="8667604.491058" name="s00_axi_aclk" hierName="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst" writeRate="0.000000" enableRate="0.000000" fanout="3.800783" ru="0.000000" fanout2="2.336577" totalFanout="403149.000000" fanoutRate="5915266.306658" numNets="217669" extNets="106070" SMUX="6304" carry8s="2670" luts="142384" logicCap="69334415673" signalCap="41237306.561981" power="1.248734" sp="0.658232">
+				</LOGIC>
+				<LOGIC clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" clockFreq2="174.550534" toggleRate="6.077139" toggleRate2="12.500000" totalRate="400.000000" name="s00_axi_aclk" hierName="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst" writeRate="0.035684" enableRate="0.000000" fanout="0.000000" ru="0.000000" fanout2="0.000000" totalFanout="0.000000" fanoutRate="0.000000" numNets="32" extNets="0" RAM="32" logicCap="23004798" signalCap="0.000000" power="0.000110" sp="0.000000">
+				</LOGIC>
+				<LOGIC clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" clockFreq2="174.550534" toggleRate="6.488145" toggleRate2="7.269287" totalRate="1019469.198328" name="s00_axi_aclk" hierName="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst" writeRate="0.000000" enableRate="0.150420" fanout="4.070546" ru="0.000000" fanout2="4.305843" totalFanout="637533.000000" fanoutRate="4683499.537653" numNets="157128" extNets="156621" ffs="157128" logicCap="8354491304" signalCap="76585376.021698" power="0.047698" sp="0.506326">
+				</LOGIC>
+				<LOGIC clock="Unclocked_or_HFN_instance" clockFreq="174.550534" clockFreq2="45.209942" toggleRate="2.863402" toggleRate2="12.519192" totalRate="6485.103610" name="Unassigned_Clock" hierName="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst" writeRate="0.000000" enableRate="1.000000" fanout="1.562363" ru="0.000000" fanout2="1.569845" totalFanout="714.000000" fanoutRate="5825.144410" numNets="571" extNets="457" carry8s="12" ffs="354" luts="32" logicCap="14529480" signalCap="114184.888382" power="0.000304" sp="0.000817">
+				</LOGIC>
+				<LOGIC clock="Unclocked_or_HFN_instance" clockFreq="174.550534" clockFreq2="174.550534" toggleRate="49.546051" toggleRate2="49.598169" totalRate="1223884.414294" name="s00_axi_aclk" hierName="scrypt_32_romix_ip_v1_0" writeRate="0.000000" enableRate="0.000000" fanout="1.038971" ru="0.000000" fanout2="1.038971" totalFanout="14423.000000" fanoutRate="615981.062340" numNets="24676" extNets="13882" BUFG="4" carry8s="1542" logicCap="416324583" signalCap="1975246.766205" power="0.016292" sp="0.077098">
+				</LOGIC>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="BRAM">
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="8.078645" power="0.002301" sp="0.000083" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_0/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_1/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_10/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_11/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_12/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_13/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_14/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_15/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_16/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_17/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_18/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_19/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_2/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_20/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_21/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_22/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_23/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_24/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_25/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_26/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_27/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_28/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_29/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_3/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_30/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_31/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_4/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_5/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_6/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_7/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_8/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="1">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB18" cascade="1" toggleRate="16.723727" power="0.002301" sp="0.000174" vccbram="0.000066" vccint="0.002235">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="18" writeWidth="18" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_9/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="9.350887" power="0.131976" sp="0.005242" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_0/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_1/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_10/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_11/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_12/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_13/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_14/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_15/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_16/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_17/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_18/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_19/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_2/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_20/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_21/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_22/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_23/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_24/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_25/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_26/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_27/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_28/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_29/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_3/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_30/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_31/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_4/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_5/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_6/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_7/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_8/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" count="28">
+					<GROUPSUMMARY>
+						<BRAM name="scrypt_32_romix_ip_v1_0/scrypt_32_romix_ip_v1_0_S00_AXI_inst|s00_axi_aclk_IBUF_BUFG" mode="RAMB36" cascade="1" toggleRate="10.585899" power="0.131976" sp="0.006059" vccbram="0.003778" vccint="0.128198">
+							<RAMPORT name="A" clock="s00_axi_aclk_IBUF_BUFG" clockFreq="174.550534" readWidth="36" writeWidth="36" enableRate="1.000000" writeMode="READ_FIRST" writeRate="0.119179">
+							</RAMPORT>
+							<RAMPORT name="B" clock="scrypt_32_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_32_romix_core/rm_9/datapath/memory/&lt;const0&gt;" clockFreq="0.000000" readWidth="0" writeWidth="0" enableRate="0.000000" writeMode="WRITE_FIRST" writeRate="1.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="IO">
+				<MODULE name="s00_axi_aclk" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_aclk" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="349.101074" toggleRate="200.000000" dataRate="Clock" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000176" vccoCurrent="0.000098" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_araddr&lt;2:7&gt;" count="6">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_araddr&lt;2:7&gt;" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="6" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="6" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000066" vccoCurrent="0.000037" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_arburst&lt;0:1&gt;" count="2">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_arburst&lt;0:1&gt;" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="2" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="2" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000022" vccoCurrent="0.000012" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_aresetn" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_aresetn" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="0.000000" toggleRate="0.000000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_arid[0]" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_arid[0]" clock="" clockFreq="0.000000" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000011" vccoCurrent="0.000006" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_arlen&lt;0:7&gt;" count="8">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_arlen&lt;0:7&gt;" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="8" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="8" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000088" vccoCurrent="0.000049" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_arready" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_arready" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="0.334522" toggleRate="0.191647" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000001" vccoCurrent="0.000001" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_arvalid" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_arvalid" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000011" vccoCurrent="0.000006" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_awaddr&lt;2:7&gt;" count="6">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_awaddr&lt;2:7&gt;" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="6" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="6" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000066" vccoCurrent="0.000037" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_awburst&lt;0:1&gt;" count="2">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_awburst&lt;0:1&gt;" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="2" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="2" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000022" vccoCurrent="0.000012" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_awid[0]" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_awid[0]" clock="" clockFreq="0.000000" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000011" vccoCurrent="0.000006" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_awlen&lt;0:7&gt;" count="8">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_awlen&lt;0:7&gt;" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="8" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="8" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000088" vccoCurrent="0.000049" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_awready" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_awready" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="1.722982" toggleRate="0.987096" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000008" vccoCurrent="0.000004" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_awvalid" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_awvalid" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000011" vccoCurrent="0.000006" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_bid[0]" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_bid[0]" clock="" clockFreq="0.000000" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="21.818817" toggleRate="12.500000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000097" vccoCurrent="0.000054" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_bready" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_bready" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000011" vccoCurrent="0.000006" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_bresp&lt;0:1&gt;" count="2">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_bresp&lt;0:1&gt;" clock="" clockFreq="0.000000" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="2" signalRate="0.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="2" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_buser[-1]" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_buser[-1]" clock="" clockFreq="0.000000" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="0.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_buser[0]" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_buser[0]" clock="" clockFreq="0.000000" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="0.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_bvalid" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_bvalid" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="0.337690" toggleRate="0.193462" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000001" vccoCurrent="0.000001" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_rdata&lt;0:31&gt;" count="32">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_rdata&lt;0:31&gt;" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="32" signalRate="17.252081" toggleRate="9.883717" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="32" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.002449" vccoCurrent="0.001361" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_rid[0]" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_rid[0]" clock="" clockFreq="0.000000" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="21.818817" toggleRate="12.500000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000097" vccoCurrent="0.000054" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_rlast" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_rlast" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="1.095738" toggleRate="0.627748" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000005" vccoCurrent="0.000003" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_rready" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_rready" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000011" vccoCurrent="0.000006" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_rresp&lt;0:1&gt;" count="2">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_rresp&lt;0:1&gt;" clock="" clockFreq="0.000000" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="2" signalRate="0.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="2" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_ruser[-1]" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_ruser[-1]" clock="" clockFreq="0.000000" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="0.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_ruser[0]" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_ruser[0]" clock="" clockFreq="0.000000" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="0.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_rvalid" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_rvalid" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="84.270409" toggleRate="48.278515" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000374" vccoCurrent="0.000208" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_wdata&lt;0:31&gt;" count="32">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_wdata&lt;0:31&gt;" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="32" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="32" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000353" vccoCurrent="0.000196" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_wlast" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_wlast" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000011" vccoCurrent="0.000006" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_wready" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_wready" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18_12_SLOW" bidis="0" inputs="0" outputs="1" signalRate="6.665738" toggleRate="3.818801" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000030" vccoCurrent="0.000016" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_wstrb&lt;0:3&gt;" count="4">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_wstrb&lt;0:3&gt;" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="4" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="4" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000044" vccoCurrent="0.000024" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="s00_axi_wvalid" count="1">
+					<GROUPSUMMARY>
+						<IO name="s00_axi_wvalid" clock="s00_axi_aclk" clockFreq="174.550534" ioStandard="LVCMOS18" bidis="0" inputs="1" outputs="0" signalRate="21.818817" toggleRate="12.500000" dataRate="SDR" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHP="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000011" vccoCurrent="0.000006" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="IOBANK">
+				<IOBANK numInternalVref="0" numDelayControl="0" numLVDSBanks="0">
+				</IOBANK>
+			</BLOCKTYPE>
+		</BYTYPE>
+	</BLOCKDETAILS>
+</POWERDATA>
+

@@ -1,0 +1,335 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date             : Wed Sep  8 17:11:35 2021
+| Host             : DESKTOP-CQEKB9O running 64-bit major release  (build 9200)
+| Command          : report_power -hier all -verbose -file {F:\MRSA\Hardware\MRSA 64 PEs\ALVEO U280\power_report.txt}
+| Design           : scrypt_64_romix_ip_v1_0
+| Device           : xcu280-fsvh2892-2L-e
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+3.2 By Clock Domain
+3.3 By Resource Type
+3.3.1 I/O
+3.3.2 Signals
+3.3.3 CLB Logic
+3.3.4 Block RAM
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 18.999       |
+|   FPGA Power (W)         | 18.742       |
+|   HBM Power (W)          | 0.257        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 15.499       |
+| Device Static (W)        | 3.500        |
+| Effective TJA (C/W)      | 0.4          |
+| Max Ambient (C)          | 91.7         |
+| Junction Temperature (C) | 33.3         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     1.529 |        3 |       --- |             --- |
+| CLB Logic                |     4.319 |   665523 |       --- |             --- |
+|   LUT as Logic           |     4.027 |   278204 |   1303680 |           21.34 |
+|   CARRY8                 |     0.159 |     8320 |    162960 |            5.11 |
+|   Register               |     0.133 |   305483 |   2607360 |           11.72 |
+|   LUT as Distributed RAM |    <0.001 |       32 |    600960 |           <0.01 |
+|   BUFG                   |    <0.001 |        4 |        96 |            4.17 |
+|   Others                 |     0.000 |     1110 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |    18604 |   1303680 |            1.43 |
+| Signals                  |     3.502 |   598416 |       --- |             --- |
+| Block RAM                |     6.099 |     1824 |      2016 |           90.48 |
+| I/O                      |     0.049 |      126 |       624 |           20.19 |
+| Static Power             |     3.500 |          |           |                 |
+| Total                    |    18.999 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint     |       0.850 |    19.338 |      17.672 |      1.666 |       NA    | Unspecified | NA         |
+| Vccint_io  |       0.850 |     0.273 |       0.003 |      0.271 |       NA    | Unspecified | NA         |
+| Vccbram    |       0.850 |     0.547 |       0.505 |      0.042 |       NA    | Unspecified | NA         |
+| Vccaux     |       1.800 |     0.806 |       0.000 |      0.806 |       NA    | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.047 |       0.012 |      0.035 |       NA    | Unspecified | NA         |
+| Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18     |       1.800 |     0.015 |       0.015 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc     |       1.800 |     0.024 |       0.000 |      0.024 |       NA    | Unspecified | NA         |
+| VCC_IO_HBM |       1.200 |     0.085 |       0.000 |      0.085 |       NA    | Unspecified | NA         |
+| VCC_HBM    |       1.200 |     0.086 |       0.000 |      0.086 |       NA    | Unspecified | NA         |
+| VCCAUX_HBM |       2.500 |     0.022 |       0.000 |      0.022 |       NA    | Unspecified | NA         |
+| MGTYAVcc   |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                                  | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 0.4                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 0.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------------+--------------+-----------------+
+| Clock        | Domain       | Constraint (ns) |
++--------------+--------------+-----------------+
+| s00_axi_aclk | s00_axi_aclk |             3.8 |
++--------------+--------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------------------------+-----------+---------+-----------+------+--------+----------+------------+---------+-----------+--------+----------+
+| Name                                   | Power (W) | Clock # | Clock (W) | Io # | Io (W) | Signal # | Signal (W) | Logic # | Logic (W) | Bram # | Bram (W) |
++----------------------------------------+-----------+---------+-----------+------+--------+----------+------------+---------+-----------+--------+----------+
+| scrypt_64_romix_ip_v1_0                |    15.499 |       3 |     1.529 |  126 |  0.049 |   598416 |      3.502 |  665523 |     4.319 |   1824 |    6.099 |
+|   scrypt_64_romix_ip_v1_0_S00_AXI_inst |    15.205 |       3 |     1.529 |    0 |  0.000 |   570710 |      3.317 |  662438 |     4.260 |   1856 |    6.099 |
+|     top_ip                             |    15.202 |       3 |     1.528 |    0 |  0.000 |   570497 |      3.315 |  662174 |     4.259 |   1856 |    6.099 |
+|       scrypt_64_romix_core             |    15.195 |       3 |     1.528 |    0 |  0.000 |   569626 |      3.313 |  661156 |     4.254 |   1856 |    6.099 |
++----------------------------------------+-----------+---------+-----------+------+--------+----------+------------+---------+-----------+--------+----------+
+
+
+3.2 By Clock Domain
+-------------------
+
++-------------------------------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+--------+
+| Name                          | Power (W) | Frequency (MHz) | Buffer | Clock Buffer Enable (%) | Enable Signal | Bel Fanout | Sites    | Fanout/Site | Type   |
++-------------------------------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+--------+
+| s00_axi_aclk                  |     1.529 |          263.64 | N/A    |                     N/A | N/A           |     307020 |   103160 |        2.98 | N/A    |
+|   s00_axi_aclk                |    <0.001 |          263.64 | N/A    |                     N/A | N/A           |          1 |        1 |        1.00 | N/A    |
+|   s00_axi_aclk_IBUF_BUFG      |     1.529 |          263.64 | BUFG   |                  100.00 | VCC_1         |     307017 |   103157 |        2.98 | N/A    |
+|   s00_axi_aclk_IBUF_BUFG_inst |    <0.001 |          263.64 | BUFG   |                  100.00 | VCC_1         |     307017 |   103157 |        2.98 | Global |
+|   s00_axi_aclk_IBUF_inst/O    |     0.000 |          263.64 | N/A    |                     N/A | N/A           |          1 |        1 |        1.00 | N/A    |
+|   s00_axi_aclk_IBUF_inst/OUT  |     0.000 |          263.64 | N/A    |                     N/A | N/A           |          1 |        1 |        1.00 | N/A    |
++-------------------------------+-----------+-----------------+--------+-------------------------+---------------+------------+----------+-------------+--------+
+
+
+3.3 By Resource Type
+--------------------
+
+3.3.1 I/O
+---------
+
++---------------------+-----------+----------+--------------+----------------+------------+-------------+------------+-----------------+----------+--------------+------------+------------------+---------------+-------------+---------------------+-----------+-------------------+------------------+------------------+------------------+---------------+---------------+------------+-------------------+----------------------+-----------------------+
+| Name                | Power (W) | I/O Type | I/O Standard | Drive Strength | Input Pins | Output Pins | Bidir Pins | IO LOGIC SERDES | IO DELAY | IBUF LOW PWR | Input Term | Output Impedance | Clock Name    | Clock (MHz) | Signal Rate (Mtr/s) | Data Rate | Output Enable (%) | Term Disable (%) | IBUF Disable (%) | Output Load (pF) | Vccint_io (W) | Vccaux_io (W) | Vccint (W) | Vcco On-chip  (W) | External Termination | Vcco   Off-chip   (W) |
++---------------------+-----------+----------+--------------+----------------+------------+-------------+------------+-----------------+----------+--------------+------------+------------------+---------------+-------------+---------------------+-----------+-------------------+------------------+------------------+------------------+---------------+---------------+------------+-------------------+----------------------+-----------------------+
+| s00_axi_rdata       |     0.036 | HP       | LVCMOS18     |          12.00 |          0 |          32 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               26.06 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |         0.001 |         0.015 |      0.000 |             0.021 | NONE                 |                 0.000 |
+|   s00_axi_rdata[24] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.69 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[22] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.45 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[30] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.45 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[29] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.45 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[28] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.45 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[27] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.45 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[26] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.45 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[25] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.45 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[23] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.44 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[31] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               27.42 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[21] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.61 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[8]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[9]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[10] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[6]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[11] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[12] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[13] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[14] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[20] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[19] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[18] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[17] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[16] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.58 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[7]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.57 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[15] |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.57 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[5]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.56 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[4]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.50 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[3]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.37 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[2]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               25.10 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[1]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               24.60 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rdata[0]  |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               23.76 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+| s00_axi_rvalid      |     0.004 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |              127.28 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.001 |      0.000 |             0.003 | NONE                 |                 0.000 |
+| s00_axi_bid         |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |               32.96 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_bid[0]    |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |               32.96 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+| s00_axi_rid         |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |               32.96 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_rid[0]    |     0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |               32.96 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+| s00_axi_wready      |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | s00_axi_aclk  |      263.64 |               10.07 | SDR       |            100.00 |             0.00 |             0.00 |             0.00 |        <0.001 |        <0.001 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+| s00_axi_bresp       |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           2 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+|   s00_axi_bresp[1]  |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+|   s00_axi_bresp[0]  |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+| s00_axi_buser       |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           2 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+|   s00_axi_buser[-1] |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+|   s00_axi_buser[0]  |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+| s00_axi_rresp       |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           2 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+|   s00_axi_rresp[1]  |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+|   s00_axi_rresp[0]  |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+| s00_axi_ruser       |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           2 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+|   s00_axi_ruser[-1] |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+|   s00_axi_ruser[0]  |    <0.001 | HP       | LVCMOS18     |          12.00 |          0 |           1 |          0 | No              | Off      | No           | NONE       | RDRV_NONE_NONE   | N/A           |        0.00 |                0.00 | Async     |            100.00 |             0.00 |             0.00 |             0.00 |         0.000 |        <0.001 |      0.000 |             0.000 | NONE                 |                 0.000 |
+| s00_axi_wdata       |    <0.001 | HP       | LVCMOS18     |            N/A |         32 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[31] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[30] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[29] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[28] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[27] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[26] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[25] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[24] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[23] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[22] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[21] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[20] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[19] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[18] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[17] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[16] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[15] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[14] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[13] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[12] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[11] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[10] |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[9]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[8]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[7]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[6]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[5]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[4]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[3]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[2]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[1]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
+|   s00_axi_wdata[0]  |    <0.001 | HP       | LVCMOS18     |            N/A |          1 |           0 |          0 | No              | Off      | No           | RTT_NONE   | NONE             | s00_axi_aclk  |      263.64 |               32.96 | SDR       |              0.00 |             0.00 |             0.00 |             0.00 |        <0.001 |         0.000 |      0.000 |            <0.001 | NONE                 |                 0.000 |
++---------------------+-----------+----------+--------------+----------------+------------+-------------+------------+-----------------+----------+--------------+------------+------------------+---------------+-------------+---------------------+-----------+-------------------+------------------+------------------+------------------+---------------+---------------+------------+-------------------+----------------------+-----------------------+
+
+
+3.3.2 Signals
+-------------
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+---------------------+----------+----------+--------------+--------------+------------+
+| Name                                                                                                                                                            | Power (W) | Signal Rate (Mtr/s) | % High   | Fanout   | Slice Fanout | Clock        | Logic Type |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+---------------------+----------+----------+--------------+--------------+------------+
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/second_counter_ip/Q[0]                                                                         |     0.073 |              150.54 |    50.00 |    24582 |            0 | s00_axi_aclk | N/A        |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/second_counter_ip/Q[1]                                                                         |     0.037 |               75.27 |    50.00 |    24581 |            0 | s00_axi_aclk | N/A        |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/second_counter_ip/Q[2]                                                                         |     0.009 |               37.64 |    50.00 |    12292 |            0 | s00_axi_aclk | N/A        |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/blockmix/datapath/salsa_20_8/controller/FSM_sequential_salsa_state_reg_reg[0]_7 |     0.003 |              125.87 |    77.73 |      764 |            0 | s00_axi_aclk | N/A        |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_0/datapath/blockmix/datapath/salsa_20_8/controller/FSM_sequential_salsa_state_reg_reg[0]_7  |     0.003 |              125.87 |    77.73 |      764 |            0 | s00_axi_aclk | N/A        |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_1/datapath/blockmix/datapath/salsa_20_8/controller/FSM_sequential_salsa_state_reg_reg[0]_7  |     0.003 |              125.87 |    77.73 |      764 |            0 | s00_axi_aclk | N/A        |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_10/datapath/blockmix/datapath/salsa_20_8/controller/FSM_sequential_salsa_state_reg_reg[0]_7 |     0.003 |              125.87 |    77.73 |      764 |            0 | s00_axi_aclk | N/A        |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_11/datapath/blockmix/datapath/salsa_20_8/controller/FSM_sequential_salsa_state_reg_reg[0]_7 |     0.003 |              125.87 |    77.73 |      764 |            0 | s00_axi_aclk | N/A        |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_12/datapath/blockmix/datapath/salsa_20_8/controller/FSM_sequential_salsa_state_reg_reg[0]_7 |     0.003 |              125.87 |    77.73 |      764 |            0 | s00_axi_aclk | N/A        |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_13/datapath/blockmix/datapath/salsa_20_8/controller/FSM_sequential_salsa_state_reg_reg[0]_7 |     0.003 |              125.87 |    77.73 |      764 |            0 | s00_axi_aclk | N/A        |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+---------------------+----------+----------+--------------+--------------+------------+
+
+
+3.3.3 CLB Logic
+---------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------+-------------+------------+---------------------+----------+
+| Name                                                                                                                                                                    | Power (W) | Type | Clock (MHz) | Clock Name | Signal Rate (Mtr/s) | % High   |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------+-------------+------------+---------------------+----------+
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_1/sum_2_1_carry__0_i_1__75  |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_1/sum_2_1_carry__1_i_1__75  |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_1/sum_2_1_carry__2_i_4__75  |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_2/sum_2_1_carry__1_i_2__76  |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_2/sum_2_1_carry__2_i_2__76  |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_3/sum_2_1_carry__1_i_1__77  |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_4/sum_2_1_carry__0_i_1__78  |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_4/sum_2_1_carry__1_i_4__78  |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_60/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_1/sum_2_1_carry__0_i_1__239 |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_60/datapath/blockmix/datapath/salsa_20_8/datapath/full_qround_1/q_round_1/sum_2_1_carry__1_i_1__239 |    <0.001 | LUT  |         N/A | Async      |              548.21 |    50.00 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------+-------------+------------+---------------------+----------+
+
+
+3.3.4 Block RAM
+---------------
+
++----------------------------------------------------------------------------------------------------------------+-----------+--------+-------------+------------------------+---------------+-------------------+--------------+---------------+--------------+------------------+-------------------------------------------------------------------------------------------------+---------------+-------------------+--------------+---------------+--------------+------------------+
+| Name                                                                                                           | Power (W) | Mode   | Signal Rate | Clock Name A           | Clock A (MHz) | Enable Rate A (%) | Read Width A | Write Width A | Write Mode A | Write Rate A (%) | Clock Name B                                                                                    | Clock B (MHz) | Enable Rate B (%) | Read Width B | Write Width B | Write Mode B | Write Rate B (%) |
++----------------------------------------------------------------------------------------------------------------+-----------+--------+-------------+------------------------+---------------+-------------------+--------------+---------------+--------------+------------------+-------------------------------------------------------------------------------------------------+---------------+-------------------+--------------+---------------+--------------+------------------+
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/memory/memory_array_reg_bram_7 |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_19/datapath/memory/<const0> |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_60/datapath/memory/memory_array_reg_bram_7 |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_60/datapath/memory/<const0> |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_1/datapath/memory/memory_array_reg_bram_7  |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_1/datapath/memory/<const0>  |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_10/datapath/memory/memory_array_reg_bram_7 |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_10/datapath/memory/<const0> |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_11/datapath/memory/memory_array_reg_bram_7 |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_11/datapath/memory/<const0> |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_12/datapath/memory/memory_array_reg_bram_7 |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_12/datapath/memory/<const0> |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_13/datapath/memory/memory_array_reg_bram_7 |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_13/datapath/memory/<const0> |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_14/datapath/memory/memory_array_reg_bram_7 |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_14/datapath/memory/<const0> |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_15/datapath/memory/memory_array_reg_bram_7 |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_15/datapath/memory/<const0> |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
+| scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_16/datapath/memory/memory_array_reg_bram_7 |     0.004 | RAMB36 |       51.66 | s00_axi_aclk_IBUF_BUFG |        263.64 |            100.00 |           36 |            36 | READ_FIRST   |            11.92 | scrypt_64_romix_ip_v1_0_S00_AXI_inst/top_ip/scrypt_64_romix_core/rm_16/datapath/memory/<const0> |          0.00 |              0.00 |            0 |             0 | WRITE_FIRST  |           100.00 |
++----------------------------------------------------------------------------------------------------------------+-----------+--------+-------------+------------------------+---------------+-------------------+--------------+---------------+--------------+------------------+-------------------------------------------------------------------------------------------------+---------------+-------------------+--------------+---------------+--------------+------------------+
+
+

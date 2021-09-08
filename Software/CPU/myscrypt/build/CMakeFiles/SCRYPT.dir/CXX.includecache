@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/datatypes.h
+
+../include/scrypt.h
+iostream
+-
+sha256.h
+../include/sha256.h
+
+../include/sha256.h
+iostream
+-
+algorithm
+-
+stddef.h
+-
+utils.h
+../include/utils.h
+datatypes.h
+../include/datatypes.h
+
+../include/utils.h
+datatypes.h
+../include/datatypes.h
+iostream
+-
+algorithm
+-
+stddef.h
+-
+
+/cygdrive/f/Litecoin Soft/myscrypt/test/test_scrypt_multithreads.cpp
+scrypt.h
+/cygdrive/f/Litecoin Soft/myscrypt/test/scrypt.h
+time.h
+-
+

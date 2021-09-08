@@ -1,0 +1,1 @@
+/usr/bin/c++.exe   -Wl,--enable-auto-import CMakeFiles/SCRYPT.dir/test/test_scrypt_multithreads.cpp.o CMakeFiles/SCRYPT.dir/src/scrypt.cpp.o CMakeFiles/SCRYPT.dir/src/sha256.cpp.o CMakeFiles/SCRYPT.dir/src/utils.cpp.o  -o SCRYPT.exe -Wl,--out-implib,libSCRYPT.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lpthread 
